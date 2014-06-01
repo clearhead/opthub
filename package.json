@@ -1,8 +1,11 @@
 {
   "name": "opthub",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "optimizely->fs",
   "main": "opthub.js",
+  "bin": {
+    "opthub": "./opthub.js"
+  },
   "dependencies": {
     "prompt": "^0.2.13",
     "rc": "^0.4.0",
