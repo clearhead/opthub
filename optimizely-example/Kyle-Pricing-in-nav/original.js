@@ -1,0 +1,1 @@
+jQuery('.nav-main li.dropdown-hover:eq(0)').after('<li><a href="/pricing">Pricing</a></li>');

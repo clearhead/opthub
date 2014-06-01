@@ -1,0 +1,1 @@
+jQuery('#create-account-dialog .secondary-button').hide();

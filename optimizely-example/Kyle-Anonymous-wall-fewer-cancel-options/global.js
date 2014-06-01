@@ -1,0 +1,1 @@
+jQuery(".spaced:eq(2)").html('<input type="checkbox" name="terms-of-service" class="hidden" checked>By clicking the "Create account" button below I agree to the <span id="SL-link-terms" class="SL_swap"><a href="/terms" target="_blank">Terms of Service</a></span> and <span id="SL-link-privacy" class="SL_swap"><a href="/privacy" target="_blank">Privacy Policy</a></span>.');

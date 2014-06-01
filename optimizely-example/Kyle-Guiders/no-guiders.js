@@ -1,0 +1,1 @@
+window.guiderVersion = '1';

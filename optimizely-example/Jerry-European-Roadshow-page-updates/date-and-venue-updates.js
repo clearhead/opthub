@@ -1,0 +1,17 @@
+$(".PAR .date").replaceWith("<div class=\"date\">19.03.2014</div>");
+$(".PAR .field-date").replaceWith("<div class=\"field field-date\"><label>Date:&nbsp;</label>March 19,2014</div>");
+$(".PAR .field-location").replaceWith("<div class=\"field field-location\"><label>Location:&nbsp;</label>MAS Paris</div>");
+$(".LON .field-location").replaceWith("<div class=\"field field-location\"><label>Location:&nbsp;</label>Westminster Impact Hub</div>");
+$(".AMS .field-location").replaceWith("<div class=\"field field-location\"><label>Location:&nbsp;</label>New Optimizely office</div>");
+$(".PAR .field-date").replaceWith("<div class=\"field field-date\"><label>Date:&nbsp;</label>March 19, 2014</div>");
+$(".AMS .field-date").replaceWith("<div class=\"field field-date\"><label>Date:&nbsp;</label>March 14, 2014</div>");
+$(".BER .field-date").replaceWith("<div class=\"field field-date\"><label>Date:&nbsp;</label>April 01, 2014</div>");
+$(".MUN .field-date").replaceWith("<div class=\"field field-date\"><label>Date:&nbsp;</label>March 27, 2014</div>");
+$(".field-name-field-schedule > .field-items > div:eq(2) > div:eq(0) > span:eq(0)").replaceWith("<span class=\"date-display-single\">09:50 AM</span>");
+$(".field-name-field-schedule > .field-items > div:eq(3) > div:eq(0) > span:eq(0)").replaceWith("<span class=\"date-display-single\">10:45 AM</span>");
+$(".field-name-field-schedule > .field-items > div:eq(4) > div:eq(0) > span:eq(0)").replaceWith("<span class=\"date-display-single\">11:05 AM</span>");
+$(".field-name-field-schedule > .field-items > div:eq(5) > div:eq(0) > span:eq(0)").replaceWith("<span class=\"date-display-single\">11:30 AM</span>");
+$(".field-name-field-schedule > .field-items > div:eq(7) > div:eq(0) > span:eq(0)").replaceWith("<span class=\"date-display-single\">01:30 PM</span>");
+$(".content > iframe").replaceWith("<iframe width=\"950\" height=\"530\" src=\"//www.youtube.com/embed/E3I6l4cVXyU#t=9&amp;cc_lang_pref=en&cc_load_policy=1\" style=\"border:none;\"></iframe>");
+jQuery(".LON .date").html("06.03.2014");
+jQuery('.LON .field.field-date').text('Date: March 06, 2014');

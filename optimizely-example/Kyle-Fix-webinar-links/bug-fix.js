@@ -1,0 +1,2 @@
+$(".dates-container .grid8 > div:eq(1) > a:eq(0)").attr({"href":"https://www4.gotomeeting.com/register/900205007"});
+$(".dates-container .grid8 > div:eq(2) > a:eq(0)").attr({"href":"https://www4.gotomeeting.com/register/900229247"});
