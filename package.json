@@ -1,6 +1,6 @@
 {
   "name": "opthub",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "optimizely->fs",
   "main": "opthub.js",
   "bin": {
