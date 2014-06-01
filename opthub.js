@@ -66,7 +66,7 @@ var opthub = function () {
           conditionalWriteFile(folder + '/README.md',
             folder + '\n' + new Array(folder.length).join('=') + '\n\n' +
             'https://www.optimizely.com/edit?experiment_id=' + key + '\n\n' +
-            '```json' + JSON.stringify(exp, true, 2) + '\n```');
+            '```json\n' + JSON.stringify(exp, true, 2) + '\n```');
 
           if (exp.code) conditionalWriteFile(folder + '/global.js', exp.code);
           if (exp.css) conditionalWriteFile(folder + '/global.css', exp.css);
