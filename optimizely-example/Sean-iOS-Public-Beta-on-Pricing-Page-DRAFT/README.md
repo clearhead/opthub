@@ -3,7 +3,8 @@ optimizely-example/Sean-iOS-Public-Beta-on-Pricing-Page-DRAFT
 
 https://www.optimizely.com/edit?experiment_id=1052440502
 
-```json{
+```json
+{
   "name": "[Sean] iOS Public Beta on Pricing Page - DRAFT",
   "variation_ids": [
     "1035991794",

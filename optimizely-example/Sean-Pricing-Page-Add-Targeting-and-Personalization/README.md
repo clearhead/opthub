@@ -3,7 +3,8 @@ optimizely-example/Sean-Pricing-Page-Add-Targeting-and-Personalization
 
 https://www.optimizely.com/edit?experiment_id=410530015
 
-```json{
+```json
+{
   "name": "[Sean] Pricing Page: Add Targeting & Personalization",
   "enabled": true,
   "conditions": [

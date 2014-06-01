@@ -3,7 +3,8 @@ optimizely-example/JulioRicky-Remove-Buttons-for-Platinum-from-Pricing-Page
 
 https://www.optimizely.com/edit?experiment_id=721452876
 
-```json{
+```json
+{
   "name": "[JulioRicky] Remove Buttons for Platinum from Pricing Page",
   "manual": true,
   "enabled": true,

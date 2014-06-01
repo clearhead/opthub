@@ -3,7 +3,8 @@ optimizely-example/JZ-Audiences-AA-test
 
 https://www.optimizely.com/edit?experiment_id=998912736
 
-```json{
+```json
+{
   "audiences": [
     996645697,
     999051036

@@ -3,7 +3,8 @@ optimizely-example/Kyle-optiverse-callout-for-significant-goals
 
 https://www.optimizely.com/edit?experiment_id=1131650595
 
-```json{
+```json
+{
   "enabled": true,
   "variation_weights": {
     "1126740584": 10000

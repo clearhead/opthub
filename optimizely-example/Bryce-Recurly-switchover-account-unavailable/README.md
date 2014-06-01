@@ -3,7 +3,8 @@ optimizely-example/Bryce-Recurly-switchover-account-unavailable
 
 https://www.optimizely.com/edit?experiment_id=311921975
 
-```json{
+```json
+{
   "name": "[Bryce] Recurly switchover account unavailable",
   "conditions": [
     {

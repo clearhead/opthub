@@ -3,7 +3,8 @@ optimizely-example/Steve-Temporary-Optiverse-redirect-to-HTTP
 
 https://www.optimizely.com/edit?experiment_id=953550472
 
-```json{
+```json
+{
   "name": "[Steve Temporary] Optiverse redirect to HTTP",
   "enabled": true,
   "conditions": [

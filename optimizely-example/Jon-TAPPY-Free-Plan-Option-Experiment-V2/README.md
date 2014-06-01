@@ -3,7 +3,8 @@ optimizely-example/Jon-TAPPY-Free-Plan-Option-Experiment-V2
 
 https://www.optimizely.com/edit?experiment_id=590230106
 
-```json{
+```json
+{
   "name": "[Jon] TAPPY: Free Plan Option (Experiment V2)",
   "conditions": [
     {

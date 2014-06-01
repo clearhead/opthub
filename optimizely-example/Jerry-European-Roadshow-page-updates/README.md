@@ -3,7 +3,8 @@ optimizely-example/Jerry-European-Roadshow-page-updates
 
 https://www.optimizely.com/edit?experiment_id=565511770
 
-```json{
+```json
+{
   "name": "[Jerry] European Roadshow page updates",
   "conditions": [
     {

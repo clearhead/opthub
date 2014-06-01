@@ -3,7 +3,8 @@ optimizely-example/Dae-HoPlatinum-Feature-Google-Analytics-Premium
 
 https://www.optimizely.com/edit?experiment_id=26723025
 
-```json{
+```json
+{
   "enabled": true,
   "audiences": [
     980217116,

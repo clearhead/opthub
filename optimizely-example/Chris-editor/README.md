@@ -3,7 +3,8 @@ optimizely-example/Chris-editor
 
 https://www.optimizely.com/edit?experiment_id=791852274
 
-```json{
+```json
+{
   "name": "[Chris] editor",
   "conditions": [
     {

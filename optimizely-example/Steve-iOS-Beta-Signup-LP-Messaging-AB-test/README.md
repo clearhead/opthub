@@ -3,7 +3,8 @@ optimizely-example/Steve-iOS-Beta-Signup-LP-Messaging-AB-test
 
 https://www.optimizely.com/edit?experiment_id=695320934
 
-```json{
+```json
+{
   "name": "[Steve] iOS Beta Signup LP - Messaging A/B test",
   "conditions": [
     {

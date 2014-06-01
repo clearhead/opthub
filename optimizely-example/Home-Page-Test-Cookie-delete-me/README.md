@@ -3,7 +3,8 @@ optimizely-example/Home-Page-Test-Cookie-delete-me
 
 https://www.optimizely.com/edit?experiment_id=1112090338
 
-```json{
+```json
+{
   "audiences": [
     1116600323
   ],

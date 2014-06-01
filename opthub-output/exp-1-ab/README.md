@@ -3,7 +3,8 @@ opthub-output/exp-1-ab
 
 https://www.optimizely.com/edit?experiment_id=1133850538
 
-```json{
+```json
+{
   "code": "// this is exp-1-ab's global javascript!",
   "name": "exp-1-ab",
   "conditions": [

@@ -3,7 +3,8 @@ optimizely-example/Toby-XING-Share-button-on-German-blog-Hide-sharing-options-on
 
 https://www.optimizely.com/edit?experiment_id=595440056
 
-```json{
+```json
+{
   "name": "[Toby] XING Share button on German blog / Hide sharing options on homepage feed",
   "enabled": true,
   "conditions": [

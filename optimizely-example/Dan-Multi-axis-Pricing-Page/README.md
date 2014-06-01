@@ -3,7 +3,8 @@ optimizely-example/Dan-Multi-axis-Pricing-Page
 
 https://www.optimizely.com/edit?experiment_id=596251136
 
-```json{
+```json
+{
   "name": "[Dan] Multi-axis Pricing Page",
   "conditions": [
     {

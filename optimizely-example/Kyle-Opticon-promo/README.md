@@ -3,7 +3,8 @@ optimizely-example/Kyle-Opticon-promo
 
 https://www.optimizely.com/edit?experiment_id=859201113
 
-```json{
+```json
+{
   "name": "[Kyle] Opticon promo",
   "conditions": [
     {

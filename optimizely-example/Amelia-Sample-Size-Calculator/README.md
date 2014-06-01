@@ -3,7 +3,8 @@ optimizely-example/Amelia-Sample-Size-Calculator
 
 https://www.optimizely.com/edit?experiment_id=1068959129
 
-```json{
+```json
+{
   "name": "[Amelia] Sample Size Calculator",
   "variation_ids": [
     "1109477715",

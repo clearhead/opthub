@@ -3,7 +3,8 @@ optimizely-example/Kyle-marketo-test
 
 https://www.optimizely.com/edit?experiment_id=924350789
 
-```json{
+```json
+{
   "name": "[Kyle] marketo test",
   "conditions": [
     {

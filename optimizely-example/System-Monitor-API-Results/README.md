@@ -3,7 +3,8 @@ optimizely-example/System-Monitor-API-Results
 
 https://www.optimizely.com/edit?experiment_id=203142438
 
-```json{
+```json
+{
   "name": "[System] Monitor API Results",
   "enabled": true,
   "conditions": [

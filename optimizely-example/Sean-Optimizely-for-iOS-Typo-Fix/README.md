@@ -3,7 +3,8 @@ optimizely-example/Sean-Optimizely-for-iOS-Typo-Fix
 
 https://www.optimizely.com/edit?experiment_id=855331772
 
-```json{
+```json
+{
   "name": "[Sean] Optimizely for iOS Typo Fix",
   "enabled": true,
   "conditions": [

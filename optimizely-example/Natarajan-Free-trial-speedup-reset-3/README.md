@@ -3,7 +3,8 @@ optimizely-example/Natarajan-Free-trial-speedup-reset-3
 
 https://www.optimizely.com/edit?experiment_id=553040798
 
-```json{
+```json
+{
   "name": "[Natarajan] Free trial speedup reset (3)",
   "enabled": true,
   "conditions": [

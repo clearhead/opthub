@@ -3,7 +3,8 @@ optimizely-example/AdrianSteve-Dedicated-Sales-Phone-Line-Bootstrap
 
 https://www.optimizely.com/edit?experiment_id=188385901
 
-```json{
+```json
+{
   "code": "$(document).ready(function (){\n   setTimeout(function() { \n      window.runSalesPop = true;\n      window.optimizely.push(['activate',187010911]);\n   }, 10000);\n\n  \n});",
   "name": "[AdrianSteve] Dedicated Sales Phone Line - Bootstrap",
   "conditions": [

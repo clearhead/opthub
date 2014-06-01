@@ -3,7 +3,8 @@ optimizely-example/Kyle-Payment-dialog-cancel-anytime-header
 
 https://www.optimizely.com/edit?experiment_id=688370115
 
-```json{
+```json
+{
   "enabled": true,
   "audiences": [
     676181492

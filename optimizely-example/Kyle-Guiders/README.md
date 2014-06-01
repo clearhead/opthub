@@ -3,7 +3,8 @@ optimizely-example/Kyle-Guiders
 
 https://www.optimizely.com/edit?experiment_id=567761079
 
-```json{
+```json
+{
   "name": "[Kyle] Guiders",
   "conditions": [
     {

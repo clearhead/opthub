@@ -3,7 +3,8 @@ optimizely-example/JonN-April-Fools-Guider
 
 https://www.optimizely.com/edit?experiment_id=758581387
 
-```json{
+```json
+{
   "name": "[JonN] April Fools Guider",
   "conditions": [
     {

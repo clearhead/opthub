@@ -3,7 +3,8 @@ optimizely-example/Growth-Account-Level-Bucketing-and-act-Snippet-Share
 
 https://www.optimizely.com/edit?experiment_id=696914908
 
-```json{
+```json
+{
   "name": "[Growth] Account Level Bucketing & act Snippet Share",
   "enabled": true,
   "conditions": [

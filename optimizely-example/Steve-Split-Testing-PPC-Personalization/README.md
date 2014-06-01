@@ -3,7 +3,8 @@ optimizely-example/Steve-Split-Testing-PPC-Personalization
 
 https://www.optimizely.com/edit?experiment_id=817160301
 
-```json{
+```json
+{
   "name": "[Steve] Split Testing PPC Personalization",
   "conditions": [
     {

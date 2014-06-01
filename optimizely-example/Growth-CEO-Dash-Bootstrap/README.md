@@ -3,7 +3,8 @@ optimizely-example/Growth-CEO-Dash-Bootstrap
 
 https://www.optimizely.com/edit?experiment_id=1003720013
 
-```json{
+```json
+{
   "enabled": true,
   "variation_weights": {
     "999990023": 10000

@@ -3,7 +3,8 @@ optimizely-example/AdrianSteve-Dedicated-Sales-Phone-Line-Currently-IE9-upgrade-
 
 https://www.optimizely.com/edit?experiment_id=187010911
 
-```json{
+```json
+{
   "name": "[AdrianSteve] Dedicated Sales Phone Line - Currently IE9 upgrade warning",
   "conditions": [
     {

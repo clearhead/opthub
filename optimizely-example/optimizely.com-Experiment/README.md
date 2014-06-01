@@ -3,7 +3,8 @@ optimizely-example/optimizely.com-Experiment
 
 https://www.optimizely.com/edit?experiment_id=1003472294
 
-```json{
+```json
+{
   "name": "optimizely.com Experiment",
   "variation_ids": [
     "998663430",

@@ -3,7 +3,8 @@ optimizely-example/Kyle-PPC-landing-page-long-term-aa
 
 https://www.optimizely.com/edit?experiment_id=644000050
 
-```json{
+```json
+{
   "name": "[Kyle] PPC landing page - long term a/a",
   "enabled": true,
   "conditions": [

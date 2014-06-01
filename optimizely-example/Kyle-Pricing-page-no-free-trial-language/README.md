@@ -3,7 +3,8 @@ optimizely-example/Kyle-Pricing-page-no-free-trial-language
 
 https://www.optimizely.com/edit?experiment_id=562510027
 
-```json{
+```json
+{
   "name": "[Kyle] Pricing page - no free trial language",
   "conditions": [
     {

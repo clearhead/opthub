@@ -3,7 +3,8 @@ optimizely-example/MarcoFabian-Webinar-page-translation-for-DE
 
 https://www.optimizely.com/edit?experiment_id=284960312
 
-```json{
+```json
+{
   "name": "[Marco/Fabian] Webinar page translation for DE",
   "conditions": [
     {

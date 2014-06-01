@@ -3,7 +3,8 @@ optimizely-example/Toby-Bootstr-Jobs-Page-Add-referral-parameter
 
 https://www.optimizely.com/edit?experiment_id=570040687
 
-```json{
+```json
+{
   "name": "[Toby] Bootstr: Jobs Page, Add referral parameter",
   "enabled": true,
   "conditions": [

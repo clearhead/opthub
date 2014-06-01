@@ -3,7 +3,8 @@ optimizely-example/Kyle-Homepage-CTA-try-it-free-vs.-test-it-out
 
 https://www.optimizely.com/edit?experiment_id=596961628
 
-```json{
+```json
+{
   "name": "[Kyle] Homepage CTA - try it free vs. test it out",
   "conditions": [
     {

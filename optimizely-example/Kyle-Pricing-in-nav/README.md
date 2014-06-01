@@ -3,7 +3,8 @@ optimizely-example/Kyle-Pricing-in-nav
 
 https://www.optimizely.com/edit?experiment_id=830960503
 
-```json{
+```json
+{
   "name": "[Kyle] Pricing in nav",
   "conditions": [
     {

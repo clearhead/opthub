@@ -3,7 +3,8 @@ optimizely-example/Christophe-Localised-support
 
 https://www.optimizely.com/edit?experiment_id=981317591
 
-```json{
+```json
+{
   "code": "var match = document.URL.match(\"www\\.optimizely\\.([^\\/]+)\\/\");\nif (typeof match !== undefined) {\n  optimizely.push(['addToSegment', 'domain', match[1]]);\n}",
   "name": "[Christophe] Localised support",
   "conditions": [

@@ -3,7 +3,8 @@ optimizely-example/Kyle-Fix-webinar-links
 
 https://www.optimizely.com/edit?experiment_id=785140643
 
-```json{
+```json
+{
   "name": "[Kyle] Fix webinar links",
   "enabled": true,
   "conditions": [

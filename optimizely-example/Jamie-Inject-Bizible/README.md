@@ -3,7 +3,8 @@ optimizely-example/Jamie-Inject-Bizible
 
 https://www.optimizely.com/edit?experiment_id=667050051
 
-```json{
+```json
+{
   "code": "/* _optimizely_evaluate=force */\n  var scriptTag = document.createElement('script');  \n  scriptTag.setAttribute(\"type\",\"text/javascript\");\n  scriptTag.setAttribute('async','true');\n  scriptTag.setAttribute('src','//cdn.bizible.com/_biz-a.js');\n  scriptTag.setAttribute('data-attach-secure-forms','true');\n  document.head.appendChild(scriptTag);",
   "name": "[Jamie] Inject Bizible",
   "enabled": true,

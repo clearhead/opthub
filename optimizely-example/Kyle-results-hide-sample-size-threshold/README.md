@@ -3,7 +3,8 @@ optimizely-example/Kyle-results-hide-sample-size-threshold
 
 https://www.optimizely.com/edit?experiment_id=925539537
 
-```json{
+```json
+{
   "name": "[Kyle] /results - hide sample size threshold",
   "enabled": true,
   "conditions": [

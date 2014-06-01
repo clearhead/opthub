@@ -3,7 +3,8 @@ optimizely-example/Platinum-Feature-Additional-MVT-Combinations
 
 https://www.optimizely.com/edit?experiment_id=136958754
 
-```json{
+```json
+{
   "name": "[Platinum Feature] Additional MVT Combinations",
   "manual": true,
   "enabled": true,

@@ -3,7 +3,8 @@ optimizely-example/James-New-Results-Page-OptIn-OptOut
 
 https://www.optimizely.com/edit?experiment_id=854790363
 
-```json{
+```json
+{
   "name": "[James] New Results Page OptIn-OptOut",
   "enabled": true,
   "conditions": [

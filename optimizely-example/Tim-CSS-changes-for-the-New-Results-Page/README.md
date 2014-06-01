@@ -3,7 +3,8 @@ optimizely-example/Tim-CSS-changes-for-the-New-Results-Page
 
 https://www.optimizely.com/edit?experiment_id=827295518
 
-```json{
+```json
+{
   "name": "[Tim] CSS changes for the New Results Page",
   "conditions": [
     {

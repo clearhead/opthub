@@ -3,7 +3,8 @@ optimizely-example/Toby-Editor-tabs-display-issue-exp-for-FR-311-temporary-will-
 
 https://www.optimizely.com/edit?experiment_id=709090215
 
-```json{
+```json
+{
   "name": "[Toby] Editor tabs display issue exp for [FR-311] (temporary, will delete when bug closed)",
   "conditions": [
     {

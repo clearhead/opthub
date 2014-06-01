@@ -3,7 +3,8 @@ optimizely-example/Growth-Share-Snippet-Install-Instructions
 
 https://www.optimizely.com/edit?experiment_id=696941682
 
-```json{
+```json
+{
   "name": "[Growth] Share Snippet Install Instructions",
   "manual": true,
   "enabled": true,

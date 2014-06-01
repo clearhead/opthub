@@ -3,7 +3,8 @@ optimizely-example/Fabian-German-Get-Started-Button
 
 https://www.optimizely.com/edit?experiment_id=256970873
 
-```json{
+```json
+{
   "name": "[Fabian] German Get Started Button",
   "enabled": true,
   "conditions": [

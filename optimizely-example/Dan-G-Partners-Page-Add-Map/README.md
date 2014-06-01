@@ -3,7 +3,8 @@ optimizely-example/Dan-G-Partners-Page-Add-Map
 
 https://www.optimizely.com/edit?experiment_id=789217529
 
-```json{
+```json
+{
   "enabled": true,
   "variation_weights": {
     "794424295": 10000

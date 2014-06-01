@@ -3,7 +3,8 @@ optimizely-example/Whelan-CrazyEgg-Integration-behind-login
 
 https://www.optimizely.com/edit?experiment_id=1005915040
 
-```json{
+```json
+{
   "enabled": true,
   "audiences": [
     1018811140

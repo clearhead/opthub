@@ -3,7 +3,8 @@ optimizely-example/Junan-Cookie-Experiment
 
 https://www.optimizely.com/edit?experiment_id=338821625
 
-```json{
+```json
+{
   "name": "[Junan] Cookie Experiment",
   "enabled": true,
   "conditions": [

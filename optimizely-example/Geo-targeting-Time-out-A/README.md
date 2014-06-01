@@ -3,7 +3,8 @@ optimizely-example/Geo-targeting-Time-out-A
 
 https://www.optimizely.com/edit?experiment_id=138750142
 
-```json{
+```json
+{
   "name": "Geo targeting Time out A",
   "conditions": [
     {

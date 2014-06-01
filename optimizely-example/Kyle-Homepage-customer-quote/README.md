@@ -3,7 +3,8 @@ optimizely-example/Kyle-Homepage-customer-quote
 
 https://www.optimizely.com/edit?experiment_id=670582446
 
-```json{
+```json
+{
   "name": "[Kyle] Homepage - customer quote",
   "conditions": [
     {

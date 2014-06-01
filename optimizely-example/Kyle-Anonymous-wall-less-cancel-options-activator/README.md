@@ -3,7 +3,8 @@ optimizely-example/Kyle-Anonymous-wall-less-cancel-options-activator
 
 https://www.optimizely.com/edit?experiment_id=595033769
 
-```json{
+```json
+{
   "code": "/* _optimizely_evaluate=force */\nwindow.KRUSH = window.KRUSH || {};\nKRUSH.anonymousWallExperimentId = 593751629;\n/* _optimizely_evaluate=safe */",
   "name": "[Kyle] Anonymous wall - less cancel options - activator",
   "enabled": true,

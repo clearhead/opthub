@@ -3,7 +3,8 @@ optimizely-example/Kyle-Homepage-long-term-aa
 
 https://www.optimizely.com/edit?experiment_id=642310104
 
-```json{
+```json
+{
   "name": "[Kyle] Homepage - long term a/a",
   "enabled": true,
   "conditions": [

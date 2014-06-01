@@ -3,7 +3,8 @@ optimizely-example/Kyle-Payment-dialog-activator
 
 https://www.optimizely.com/edit?experiment_id=669720319
 
-```json{
+```json
+{
   "code": "/* _optimizely_evaluate=force */\nwindow.KRUSH = window.KRUSH || {};\nKRUSH.pricingDialogueExperimentId = 688370115;\n/* _optimizely_evaluate=safe */",
   "name": "[Kyle] Payment dialog - activator",
   "enabled": true,

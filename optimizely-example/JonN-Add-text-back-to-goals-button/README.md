@@ -3,7 +3,8 @@ optimizely-example/JonN-Add-text-back-to-goals-button
 
 https://www.optimizely.com/edit?experiment_id=688660739
 
-```json{
+```json
+{
   "name": "[JonN] Add text back to goals button",
   "conditions": [
     {

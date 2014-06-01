@@ -3,7 +3,8 @@ optimizely-example/Kyle-Optiverse-sign-in-fix
 
 https://www.optimizely.com/edit?experiment_id=845191212
 
-```json{
+```json
+{
   "name": "[Kyle] Optiverse sign in fix",
   "enabled": true,
   "conditions": [

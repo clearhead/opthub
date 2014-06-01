@@ -3,7 +3,8 @@ optimizely-example/Toby-Bootstr-Jobs-Page-Highlight-AMS-positions-for-Europeans
 
 https://www.optimizely.com/edit?experiment_id=570511568
 
-```json{
+```json
+{
   "enabled": true,
   "audiences": [
     759154500

@@ -3,7 +3,8 @@ optimizely-example/Platinum-Feature-Limited-SiteCatalyst-Options-for-Guardian
 
 https://www.optimizely.com/edit?experiment_id=30330250
 
-```json{
+```json
+{
   "name": "[Platinum Feature] Limited SiteCatalyst Options for Guardian",
   "manual": true,
   "enabled": true,

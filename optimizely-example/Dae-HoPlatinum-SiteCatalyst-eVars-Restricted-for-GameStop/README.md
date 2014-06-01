@@ -3,7 +3,8 @@ optimizely-example/Dae-HoPlatinum-SiteCatalyst-eVars-Restricted-for-GameStop
 
 https://www.optimizely.com/edit?experiment_id=582871265
 
-```json{
+```json
+{
   "enabled": true,
   "audiences": [
     657893310
