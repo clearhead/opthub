@@ -11,27 +11,18 @@ npm install -g opthub
 
 ## Hello World ##
 
+See the output in [./opthub-output/](./opthub-output/)!
+
 ```bash
 # Run it!
 $ opthub 
 prompt: http://cdn.optimizely.com/js/THIS_NUMBER.js:  1127947420
 ./opthub-output/: 2 experiments / wrote 8 files
-
-# See what downloaded: 
-$ ll ./opthub-output/*
-./opthub-output/exp-1-ab
-├── [-rw-r--r-- tomfuertes  643 Jun  1 17:32]  README.md
-├── [-rw-r--r-- tomfuertes   36 Jun  1 17:32]  global.css
-├── [-rw-r--r-- tomfuertes   40 Jun  1 17:32]  global.js
-└── [-rw-r--r-- tomfuertes  253 Jun  1 17:32]  variation-1.js
-./opthub-output/exp-2-ab
-├── [-rw-r--r-- tomfuertes  643 Jun  1 17:32]  README.md
-├── [-rw-r--r-- tomfuertes   36 Jun  1 17:32]  global.css
-├── [-rw-r--r-- tomfuertes   40 Jun  1 17:32]  global.js
-└── [-rw-r--r-- tomfuertes  253 Jun  1 17:32]  variation-1.js
 ```
 
 ## Multiple Projects Support ##
+
+See the output in [./opthub-output/](./opthub-output/) and [./optimizely-example/](./optimizely-example/)!
 
 ```bash
 # Compile your snippet ids (1 or more)
@@ -46,3 +37,11 @@ $ opthub
 ./optimizely-example/: 75 experiments / wrote 169 files
 ./opthub-output/: 2 experiments / wrote 8 files
 ```
+
+## Authors ##
+
+* Tom Fuertes - [tomfuertes](//github.com/tomfuertes) | [thisbetom](//twitter.com/thisbetom)
+
+## Clearhead? ##
+
+We're an AB Testing Consulting Agency specializing in Optimizely engagements. [We're hiring](http://clearhead.me/#contact-nav)!
