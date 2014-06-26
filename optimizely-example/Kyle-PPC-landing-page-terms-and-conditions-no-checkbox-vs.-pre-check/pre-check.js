@@ -1,1 +1,0 @@
-jQuery("[name='terms-of-service']").prop('checked', true);

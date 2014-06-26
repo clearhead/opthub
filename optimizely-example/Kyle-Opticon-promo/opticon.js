@@ -1,1 +1,0 @@
-jQuery('.hero').append('<p style="color: #fff; margin-top: 45px;">Exciting announcements in mobile, community, technology partnerships, and more. <br> <a style="color: #fff;" href="http://blog.optimizely.com/2014/04/17/opticon-2014-optimizely-product-announcements/">Learn more &raquo</a></p>').css('height', '290px');

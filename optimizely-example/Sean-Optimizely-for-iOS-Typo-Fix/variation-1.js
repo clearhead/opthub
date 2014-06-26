@@ -1,1 +1,0 @@
-$("#trusted .section-container > p:eq(0)").replaceWith("<p>Optimizely for iOS is built in the world's #1 optimization platform, trusted by more than 6,000 customers globally.</p>");

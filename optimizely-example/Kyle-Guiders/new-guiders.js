@@ -1,1 +1,0 @@
-window.guiderVersion = '3';

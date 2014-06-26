@@ -1,1 +1,0 @@
-$('.trial-info:lt(3)').text('30 day trial, then');

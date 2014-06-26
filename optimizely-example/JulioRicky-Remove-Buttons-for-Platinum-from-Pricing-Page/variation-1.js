@@ -1,1 +1,0 @@
-$('.a-center, .bronze, .silver, .gold, .price, .discount, #pickers-container').detach();
