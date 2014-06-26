@@ -71,7 +71,7 @@ var getAnswer = function (q) {
 var conditionalWriteFile = function (name, txt) {
   fs.readFile(name, function (err, data) {
     if (err) data = '';
-    console.log(('############ diff of ' + name + ' ############').magenta);
+    console.log(('############ diff of ' + name + ' ############').blue);
     if (different(data.toString(), txt)) {
       if (getAnswer('Write diff to ' + name))
         fs.writeFile(name, txt);
