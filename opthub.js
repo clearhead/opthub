@@ -9,9 +9,14 @@ var slug = require('slug');
 var conf = require('rc')('opthub', {});
 var prompt = require('sync-prompt').prompt;
 var yesNo = require('yes-no').parse;
-
-require('colors');
 var jsdiff = require('diff');
+require('colors');
+
+var onError = function (err) {
+  console.log('ERROR :( / Docs: https://github.com/tomfuertes/opthub');
+  console.log(err);
+};
+
 var different = function (start, end) {
   // console.log(start, end);
   var diff = jsdiff.diffLines(start, end);
@@ -25,6 +30,10 @@ var different = function (start, end) {
   console.log();
   return start != end; // jshint ignore:line
 };
+
+if (!conf.api_token) throw new Error('.opthubrc needs to have an api_token');
+if (!conf.experiment_id) throw new Error('.opthubrc needs to have an experiment_id');
+
 
 var client = request.newClient('https://www.optimizelyapis.com/experiment/v1/', {
   headers: {
@@ -92,7 +101,7 @@ get('experiments/' + conf.experiment_id + '/')
       conditionalWriteFile('global.js', experiment.custom_js);
       conditionalWriteFile('global.css', experiment.custom_css);
     }
-  });
+  }, onError);
 
 get('experiments/' + conf.experiment_id + '/variations/')
   .then(function (variations) {
@@ -113,4 +122,4 @@ get('experiments/' + conf.experiment_id + '/variations/')
         conditionalWriteFile(slug(variation.description).toLowerCase() + '.js', variation.js_component);
       });
     }
-  });
+  }, onError);
