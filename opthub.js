@@ -1,151 +1,103 @@
-#! /usr/bin/env node
+#!/usr/bin/env node
 
-var UPLOAD = process.argv[2] === 'up';
+/**
+ * Project: opthub
+ * description: optimizely->github
+ * 2014-06-01 NOTE:
+ *    This code is the result of a Clearhead hackathon -
+ *    As such, shipping module > comments at the moment
+ */
 
-var request = require('request-json');
-var fs = require('fs');
-var Q = require('q');
+var request = require('request');
 var slug = require('slug');
-var conf = require('rc')('opthub', {});
-var prompt = require('sync-prompt').prompt;
-var yesNo = require('yes-no').parse;
-var jsdiff = require('diff');
-var git = require('git-promise');
-var gitUtil = require('git-promise/util');
-require('colors');
+var fs = require('fs');
+var rc = require('rc');
+var prompt = require('prompt');
+var conf = rc('opthub');
 
-var log = function () {
-  if (arguments[0] !== undefined)
-    console.log(arguments[0]);
-};
+/*jshint loopfunc:true*/
+/*jshint curly:false*/
+/*jshint expr:true*/
 
-var onError = function (err) {
-  log('ERROR :( / Docs: https://github.com/tomfuertes/opthub');
-  log(err);
-};
-
-var different = function (start, end) {
-  // log(start, end);
-  var diff = jsdiff.diffLines(start, end);
-  diff.forEach(function (part) {
-    // green for additions, red for deletions
-    // grey for common parts
-    var color = part.added ? 'green' :
-      part.removed ? 'red' : 'grey';
-    process.stderr.write(part.value[color]);
-  });
-  log();
-  return start != end; // jshint ignore:line
-};
-
-if (!conf.api_token) throw new Error('.opthubrc needs to have an api_token');
-if (!conf.experiment_id) throw new Error('.opthubrc needs to have an experiment_id');
-
-var client = request.newClient('https://www.optimizelyapis.com/experiment/v1/', {
-  headers: {
-    'Token': conf.api_token
-  },
-  rejectUnauthorized: false
+var optimizelyProjectIds = Object.keys(conf).filter(function (k) {
+  return k.match(/^\d+$/);
 });
 
-var get = function (url) {
-  var defer = Q.defer();
-  client.get(url, function (err, res, body) {
-    if (err) defer.reject(err);
-    else defer.resolve(body);
-  });
-  return defer.promise;
-};
-var put = function (url, data) {
-  var defer = Q.defer();
-  client.put(url, data, function (err, res, body) {
-    if (err) defer.reject(err);
-    else defer.resolve(body);
-  });
-  return defer.promise;
-};
-
-var getAnswer = function (q) {
-  var a = prompt(q + '? [y/N]: ');
-  if (a === '') a = false;
-  else a = yesNo(a);
-  return a;
-};
-
+var fileCount = 0;
 var conditionalWriteFile = function (name, txt) {
-  fs.readFile(name, function (err, data) {
-    if (err) data = '';
-    log(('############ diff of ' + name + ' ############').blue);
-    if (different(data.toString(), txt)) {
-      if (getAnswer('Write diff to ' + name))
-        fs.writeFile(name, txt);
-    }
+  var current;
+  try {
+    current = fs.readFileSync(name);
+  } catch (e) {}
+  /*jshint eqeqeq:false*/
+  if (current != txt) { // purposeful != b/c ?encoding?
+    fileCount++; // console.log(' - writing ' + name);
+    fs.writeFile(name, txt);
+  }
+};
+
+var opthub = function () {
+  optimizelyProjectIds.forEach(function (optimizelyProjectId) {
+    var url = 'http://cdn.optimizely.com/js/' + optimizelyProjectId + '.js';
+    var friendlyUrlName = conf[optimizelyProjectId] || 'opthub-output';
+    request(url, function (error, response, body) {
+      if (error) console.error('request error on: ' + url);
+      if (!error && response.statusCode === 200) {
+        fileCount = 0;
+        body = body.split('\n');
+        var optimizelyString = body.filter(function (l) {
+          return l.indexOf('var DATA') !== -1;
+        })[0];
+        optimizelyString = optimizelyString.replace('var DATA=', '');
+        optimizelyString = optimizelyString.substring(0, optimizelyString.length - 1);
+        var optimizely = JSON.parse(optimizelyString);
+        var projectSlug = slug(friendlyUrlName);
+        try {
+          fs.mkdirSync(projectSlug);
+        } catch (e) {}
+
+        Object.keys(optimizely.experiments).forEach(function (key) {
+          var exp = optimizely.experiments[key];
+          var folder = projectSlug + '/' + slug(exp.name);
+          try {
+            fs.mkdirSync(folder);
+          } catch (e) {}
+
+          conditionalWriteFile(folder + '/README.md',
+            folder + '\n' + new Array(folder.length).join('=') + '\n\n' +
+            'https://www.optimizely.com/edit?experiment_id=' + key + '\n\n' +
+            '```json\n' + JSON.stringify(exp, true, 2) + '\n```');
+
+          if (exp.code) conditionalWriteFile(folder + '/global.js', exp.code);
+          if (exp.css) conditionalWriteFile(folder + '/global.css', exp.css);
+
+          if (exp.variation_ids) exp.variation_ids.forEach(function (variation) {
+            var val = optimizely.variations[variation];
+            if (val.code)
+              conditionalWriteFile(folder + '/' + slug(val.name + '.js').toLowerCase(), val.code);
+          });
+
+        });
+        console.log('./' + projectSlug + '/: ' + Object.keys(optimizely.experiments).length +
+          ' experiments / wrote ' + fileCount + ' files');
+
+
+      }
+    });
   });
 };
 
-function getExperiments(eid) {
-  get('experiments/' + eid + '/')
-    .then(function (experiment) {
-      function processGlobal(fileName, key) {
-        fs.readFile(fileName, function (err, data) {
-          if (err) return;
-          if (different(experiment[key], data.toString())) {
-            if (getAnswer('Upload diff to ' + fileName)) {
-              var x = {};
-              x[key] = data.toString();
-              put('experiments/' + experiment.id, x, log).then(function () {
-                log('Uploaded to: https://www.optimizely.com/edit?experiment_id=' + eid);
-              });
-            }
-          }
-        });
+if (optimizelyProjectIds.length) opthub();
+else {
+  prompt.start();
+  prompt.get({
+    properties: {
+      optimizelyProjectId: {
+        description: 'http://cdn.optimizely.com/js/THIS_NUMBER.js'
       }
-
-      if (UPLOAD) {
-        processGlobal('global.js', 'custom_js');
-        processGlobal('global.css', 'custom_css');
-      } else {
-        conditionalWriteFile('global.js', experiment.custom_js);
-        conditionalWriteFile('global.css', experiment.custom_css);
-      }
-    }, onError);
-}
-
-function getVariations(eid) {
-  get('experiments/' + eid + '/variations/')
-    .then(function (variations) {
-      if (UPLOAD) {
-        variations.forEach(function (variation) {
-          var name = slug(variation.description).toLowerCase() + '.js';
-          fs.readFile(name, function (err, data) {
-            if (err) return;
-            if (different(variation.js_component, data.toString())) {
-              if (getAnswer('Upload diff to ' + name)) {
-                variation.js_component = data.toString();
-                put('variations/' + variation.id, variation).then(function () {
-                  log('Uploaded to: https://www.optimizely.com/edit?experiment_id=' + eid);
-                });
-              }
-            }
-          });
-        });
-      } else {
-        variations.forEach(function (variation) {
-          conditionalWriteFile(slug(variation.description).toLowerCase() + '.js', variation.js_component);
-        });
-      }
-    }, onError);
-}
-
-git('status --porcelain', gitUtil.extractStatus).then(function (status) {
-  var err;
-  ['modified', 'added', 'deleted', 'renamed', 'copied'].forEach(function (b) {
-    if (status.workingTree[b].length) {
-      err = 'dirty git tree - please stash/commit first';
-      console.error(err.red);
-      throw err;
     }
+  }, function (err, result) {
+    optimizelyProjectIds.push(result.optimizelyProjectId.match(/\d+/)[0]);
+    opthub();
   });
-  getExperiments(conf.experiment_id);
-  getVariations(conf.experiment_id);
-});
+}

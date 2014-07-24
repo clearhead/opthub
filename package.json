@@ -1,33 +1,29 @@
 {
   "name": "opthub",
-  "version": "0.0.6",
+  "version": "0.0.10",
   "description": "optimizely->fs",
   "main": "opthub.js",
   "bin": {
     "opthub": "./opthub.js"
   },
   "dependencies": {
-    "colors": "^0.6.2",
-    "diff": "^1.0.8",
-    "git-promise": "^0.2.0",
-    "q": "^1.0.1",
+    "prompt": "^0.2.13",
     "rc": "^0.4.0",
-    "request-json": "^0.4.11",
-    "slug": "^0.5.0",
-    "sync-prompt": "^0.4.1",
-    "yes-no": "0.0.1"
+    "request": "^2.36.0",
+    "slug": "^0.5.0"
   },
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/tomfuertes/opthub.git"
+    "url": "https://github.com/clearhead/opthub.git"
   },
   "author": "tomfuertes",
   "license": "LICENSE-2.0.txt",
   "bugs": {
-    "url": "https://github.com/tomfuertes/opthub/issues"
+    "url": "https://github.com/clearhead/opthub/issues"
   },
-  "homepage": "https://github.com/tomfuertes/opthub"
+  "homepage": "https://github.com/clearhead/opthub"
 }
