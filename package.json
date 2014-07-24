@@ -1,12 +1,12 @@
 {
   "name": "opthub",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "optimizely->fs",
   "main": "opthub.js",
   "bin": {
     "opthub": "./opthub.js"
   },
-  "devDependencies": {
+  "dependencies": {
     "diff": "^1.0.8",
     "git-promise": "^0.2.0",
     "q": "^1.0.1",
