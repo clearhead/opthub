@@ -21,12 +21,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/clearhead/opthub.git"
+    "url": "https://github.com/tomfuertes/opthub.git"
   },
   "author": "tomfuertes",
   "license": "LICENSE-2.0.txt",
   "bugs": {
-    "url": "https://github.com/clearhead/opthub/issues"
+    "url": "https://github.com/tomfuertes/opthub/issues"
   },
-  "homepage": "https://github.com/clearhead/opthub"
+  "homepage": "https://github.com/tomfuertes/opthub"
 }
