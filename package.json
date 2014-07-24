@@ -1,24 +1,20 @@
 {
   "name": "opthub",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "optimizely->fs",
   "main": "opthub.js",
   "bin": {
     "opthub": "./opthub.js"
   },
   "devDependencies": {
-    "colors": "^0.6.2",
     "diff": "^1.0.8",
-    "filendir": "0.0.1",
     "git-promise": "^0.2.0",
     "q": "^1.0.1",
-    "q-io": "^1.11.2",
     "rc": "^0.4.0",
-    "request-json": "^0.4.10",
+    "request-json": "^0.4.11",
     "slug": "^0.5.0",
     "sync-prompt": "^0.4.1",
-    "yes-no": "0.0.1",
-    "yesno": "0.0.1"
+    "yes-no": "0.0.1"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
